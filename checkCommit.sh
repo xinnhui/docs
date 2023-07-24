@@ -1,8 +1,13 @@
 #!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+# . "$(dirname -- "$0")/_/husky.sh"
+
+# 获取并显示当前目录
+current_dir=$(pwd)
+echo "当前目录为：$current_dir"
 
 # 获取提交者的邮箱地址
 COMMITTER_EMAIL=$(git config user.email)
+
 # 定义合法邮箱地址的正则表达式
 VALID_EMAIL_REGEX='^.*@qq\.com$'
 

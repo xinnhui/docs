@@ -2,6 +2,9 @@
 
 # 确保脚本抛出遇到的错误
 set -e
+# 根目录 docs 提交用户
+DOCS_COMMITTER_NAME=$(git config user.name)
+DOCS_COMMITTER_EMAIL=$(git config user.email)
 
 # 生成静态文件
 npm run docs:build
@@ -13,7 +16,13 @@ cd docs/.vuepress/dist
 # echo 'www.example.com' > CNAME
 
 git init
-yarn checkCommit
+git config user.name "$DOCS_COMMITTER_NAME"
+git config user.email "$DOCS_COMMITTER_EMAIL"
+echo "user.name $(git config user.name)"
+echo "user.email $(git config user.email)"
+
+. ../../../checkCommit.sh
+
 git add -A
 git commit -m 'deploy'
 
