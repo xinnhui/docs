@@ -1,0 +1,29 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "个人博客",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs --temp .temp",
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh",
+    "prepare": "husky install",
+    "checkCommit": "bash checkCommit.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.9.9",
+    "@vuepress/plugin-pwa": "^1.9.9",
+    "vuepress": "^1.9.9",
+    "husky": "^8.0.0"
+  },
+  "dependencies": {
+    "@vssue/api-github-v4": "^1.4.7",
+    "@vssue/vuepress-plugin-vssue": "^1.4.8",
+    "husky": "^8.0.3",
+    "husky-init": "^8.0.0",
+    "moment": "^2.29.4"
+  }
+}
