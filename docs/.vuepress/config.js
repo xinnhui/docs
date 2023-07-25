@@ -1,7 +1,6 @@
 const headConf = require('./config/headConf');
 const pluginsConf = require('./config/pluginsConf');
-const navConf = require('./config/navConf');
-const sidebarConf = require('./config/sidebarConf');
+const nav = require('./nav');
 
 module.exports = {
     base:'/docs/',
@@ -12,7 +11,6 @@ module.exports = {
     themeConfig: {
       lastUpdated: '更新时间', // string | boolean
       logo: '/assets/img/hero.png',
-      nav: navConf,
-      sidebar: sidebarConf
+      nav: nav,
     }
   }

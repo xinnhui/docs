@@ -1,10 +1,10 @@
 ---
-title: CSS C
-autoPrev: README
+title: javascript C
 ---
 
 ## 二级标题
 ### 1.三级标题1
+
 ### 1.三级标题2
 ### 1.三级标题3
 
